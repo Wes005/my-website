@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calcul du Nombre de batterie pour onduleur</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <nav>
+            <p id="text">Calculer Le Nombre De Batteries Dont Votre Onduleur a besoin</p>
+            <img id="batteries-image" src="image-batt.png" alt="">
+        </nav>
+        <div id="container">
+
+            <div id="inputs">
+
+                <!--Champs pour relve de charge-->
+                <div id="charges">
+                    <h2 id="relveCharge">Relvée de charge</h2>
+                    <p id="instruction">*Pour des calculs optimales, veuiller entrer "Réfrigérateur" dans le champs "Nom de l'article" pour les réfrigérateurs ou congélateurs.</p>
+
+                    <form action="" id="form">
+
+                        <div id="articles">
+
+                            <div id="article1" class="article">
+                            
+                            <label for="" id="label1" class="label"><b>ARTICLE 1</b></label><br>
+                            <input type="text" id="element1" class="name item" placeholder="Nom de l'article"><br>
+                            <input type="number" id="element1-puissance" class="puissance item" placeholder="Puissance(W)"><br>
+                            <input type="number" id="element1-heure" class="heure item" placeholder="Nombre d'heures d'utilisation par jour" ><br>
+                            <input type="number" id="element1-jour" class="jour item" placeholder="Nombre de jours utilisé par semaine(J)">
+
+                            </div>
+                            <div id="article2" class="article">
+
+                            <label for="" id="label2" class="label"><b>ARTICLE 2</b></label><br>
+                            <input type="text" id="element2" class="name item" placeholder="Nom de l'article"><br>
+                            <input type="number" id="element2-puissance" class="puissance item" placeholder="Puissance(W)"><br>
+                            <input type="number" id="element2-heure" class="heure item" placeholder="Nombre d'heures d'utilisation par jour"><br>
+                            <input type="number" id="element2-jour" class="jour item" placeholder="Nombre de jours utilisé par semaine(J)">
+
+                            </div>
+                            <div id="article3" class="article">
+
+                            <label for="" id="label3" class="label"><b>ARTICLE 3</b></label><br> 
+                            <input type="text" id="element3" class="name item" placeholder="Nom de l'article"><br>
+                            <input type="number" id="element3-puissance" class="puissance item" placeholder="Puissance(W)"><br>
+                            <input type="number" id="element3-heure" class="heure item" placeholder="Nombre d'heures d'utilisation par jour"><br>
+                            <input type="number" id="element3-jour" class="jour item" placeholder="Nombre de jours utilisé par semaine(J)">
+
+                            </div>
+
+                        </div>
+
+                        <div id="button">
+                            <button type="button" id="newField">Ajouter un nouveau champs</button>
+                        </div>
+
+                    </form>
+
+                    <!--Champs pour les informations du Système-->
+                    <div id="infoSysteme">
+
+                        <h2 id="systeme">Infos Système</h2>
+                        <form id="sysField">
+                        
+                            <input type="number" class="item" id="autonomie" placeholder="Nombre de jours d'autonomie">
+                            <input type="number" class="item" id="ah_batt" placeholder="Ampère-Heure Batterie(AH)">
+                            <input type="number" class="item" id="volt_batt" placeholder="Tension Batterie(V)"><br>
+                            
+                            <label for="this">Tension Onduleur</label>
+                            <input id="radio" class="item" type="radio" name="tension onduleur" value="24">24 V
+                            <input id="radio" class="item" type="radio" name="tension onduleur" value="48">48 V
+                            <button type="button" id="calculation">CALCULER</button>
+
+                            <p id="errormsg" class="error hidden">Veuillez remplir tous les champs ! ! !</p>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+            <!--Outputs-->
+            <div id="outputs"></div>
+
+
+
+
+        </div>
+
+    </body>
+</html>
